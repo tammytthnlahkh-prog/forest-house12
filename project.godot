@@ -1,0 +1,39 @@
+; Engine configuration file.
+; لا تعدّل هذا الملف يدويًا إلا إذا كنت تعرف ما تفعل.
+
+config_version=5
+
+[application]
+
+config/name="بيت الغابة"
+config/description="لعبة رعب عربية - بيت قديم في غابة، ممر لا ينتهي، وكيان يراقبك."
+run/main_scene="res://scenes/menu.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Sfx="*res://scripts/sfx.gd"
+Game="*res://scripts/game.gd"
+
+[display]
+
+window/handheld/orientation=4
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom_font="res://fonts/DejaVuSans.ttf"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_3d=1
+limits/opengl/max_renderable_lights=64
+limits/opengl/max_lights_per_object=16
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
